@@ -5,8 +5,9 @@ import os
 
 def convertaudio(link, name):
     # convert audio m3u8 to mp3 with ffmpeg
-
-    os.system(f'ffmpeg.exe -http_persistent false -i {link} -vcodec copy -c copy {name}.mp3')
+    
+    os.system(f'ffmpeg -http_persistent false -i {link} -vcodec copy -c copy {name}.mp3')
+    # ADD .exe TO "ffmpeg" IN COMMAND IF U USE WINDOWS
 
 
 def getlink(url):
